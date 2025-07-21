@@ -1,0 +1,122 @@
+import React from 'react';
+
+const Technology = () => {
+  const techCategories = [
+    {
+      title: "Frontend",
+      technologies: [
+        { name: "React", level: 90 },
+        { name: "TypeScript", level: 85 },
+        { name: "JavaScript", level: 95 },
+        { name: "HTML/CSS", level: 90 },
+        { name: "Tailwind CSS", level: 85 },
+        { name: "Next.js", level: 80 }
+      ]
+    },
+    {
+      title: "Backend",
+      technologies: [
+        { name: "Node.js", level: 90 },
+        { name: "Python", level: 85 },
+        { name: "Express.js", level: 85 },
+        { name: "Django", level: 75 },
+        { name: "Flask", level: 80 },
+        { name: "REST APIs", level: 90 }
+      ]
+    },
+    {
+      title: "Database & Tools",
+      technologies: [
+        { name: "PostgreSQL", level: 85 },
+        { name: "MongoDB", level: 80 },
+        { name: "Git", level: 90 },
+        { name: "Docker", level: 75 },
+        { name: "AWS", level: 70 },
+        { name: "Firebase", level: 80 }
+      ]
+    }
+  ];
+
+  return (
+    <section id="technology" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Technology Stack
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Technologies and tools I use to bring ideas to life, 
+            from frontend interfaces to backend systems.
+          </p>
+        </div>
+
+        {/* Technology Categories */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {techCategories.map((category, categoryIndex) => (
+            <div
+              key={categoryIndex}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                {category.title}
+              </h3>
+              
+              <div className="space-y-4">
+                {category.technologies.map((tech, techIndex) => (
+                  <div key={techIndex} className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700 font-medium">
+                        {tech.name}
+                      </span>
+                      <span className="text-gray-500 text-sm">
+                        {tech.level}%
+                      </span>
+                    </div>
+                    
+                    {/* Progress Bar */}
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div
+                        className="bg-gradient-to-r from-gray-600 to-gray-800 h-2 rounded-full transition-all duration-1000 ease-out"
+                        style={{ width: `${tech.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Skills */}
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">
+            Additional Skills
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              "Agile/Scrum",
+              "Test-Driven Development",
+              "CI/CD",
+              "Microservices",
+              "GraphQL",
+              "Redis",
+              "Elasticsearch",
+              "Kubernetes"
+            ].map((skill, index) => (
+              <span
+                key={index}
+                className="px-6 py-3 bg-white text-gray-700 rounded-full shadow-md hover:shadow-lg transition-shadow duration-200 font-medium"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Technology;
+
