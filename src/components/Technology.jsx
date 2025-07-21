@@ -8,9 +8,8 @@ const Technology = () => {
         { name: "React", level: 90 },
         { name: "TypeScript", level: 85 },
         { name: "JavaScript", level: 95 },
-        { name: "HTML/CSS", level: 90 },
-        { name: "Tailwind CSS", level: 85 },
-        { name: "Next.js", level: 80 }
+        { name: "HTML/CSS", level: 95 },
+        { name: "Tailwind CSS", level: 50 }
       ]
     },
     {
@@ -19,7 +18,6 @@ const Technology = () => {
         { name: "Node.js", level: 90 },
         { name: "Python", level: 85 },
         { name: "Express.js", level: 85 },
-        { name: "Django", level: 75 },
         { name: "Flask", level: 80 },
         { name: "REST APIs", level: 90 }
       ]
@@ -27,12 +25,11 @@ const Technology = () => {
     {
       title: "Database & Tools",
       technologies: [
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 80 },
-        { name: "Git", level: 90 },
-        { name: "Docker", level: 75 },
-        { name: "AWS", level: 70 },
-        { name: "Firebase", level: 80 }
+        { name: "Firebase", level: 90 },
+        { name: "Oracle", level: 90 },
+        { name: "Vercel", level: 80 },
+        { name: "Hostinger", level: 80 },
+        { name: "ClickUp", level: 75 },
       ]
     }
   ];
@@ -97,12 +94,12 @@ const Technology = () => {
             {[
               "Agile/Scrum",
               "Test-Driven Development",
-              "CI/CD",
               "Microservices",
-              "GraphQL",
-              "Redis",
-              "Elasticsearch",
-              "Kubernetes"
+              "Software Architecture",
+              "Design Patterns",
+              "Fluent English",
+              "Intermediate Spanish",
+              "Native Portuguese",
             ].map((skill, index) => (
               <span
                 key={index}

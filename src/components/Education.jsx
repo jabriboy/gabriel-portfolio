@@ -4,55 +4,54 @@ import { GraduationCap, Award, BookOpen, Calendar } from 'lucide-react';
 const Education = () => {
   const education = [
     {
-      degree: "Bachelor's in Computer Science",
-      institution: "Federal University of Technology",
-      period: "2018 - 2022",
-      description: "Focused on software engineering, algorithms, and data structures. Graduated with honors.",
+      degree: "Bachelor's in Computer Engineering",
+      institution: "Senai CIMATEC",
+      period: "2020 - Present",
+      description: "Focused on software engineering, algorithms, and data structures. Gaining experience in building scalable solutions to complex problems.",
       type: "degree"
     },
     {
-      degree: "Full-Stack Web Development Bootcamp",
-      institution: "Tech Academy",
-      period: "2022",
-      description: "Intensive 6-month program covering modern web development technologies and best practices.",
-      type: "bootcamp"
+      degree: "Dev. Full-Stack",
+      institution: "Infinity School",
+      period: "2022 - 2023",
+      description: "Intensive 15-month program covering modern web development technologies and best practices.",
+      type: "Course"
+    },
+    {
+      degree: "Santander Bootcamp - Backend Java",
+      institution: "DIO",
+      period: "2023",
+      description: "Intensive 2-month program distributed by Santander about backend development using Java and Spring Boot.",
+      type: "Bootcamp"
+    },
+    {
+      degree: "Backend Flask",
+      institution: "Infinity School",
+      period: "2023",
+      description: "Intensive 2-month backend development program using Python and Flask, covering API design, databases, and deployment.",
+      type: "Course"
     }
   ];
 
   const certifications = [
     {
-      name: "AWS Certified Developer",
-      issuer: "Amazon Web Services",
+      name: "Dev. FullStack",
+      issuer: "Infinity School",
       year: "2023",
       icon: <Award className="w-6 h-6" />
     },
     {
-      name: "React Developer Certification",
-      issuer: "Meta",
+      name: "Backend Flask",
+      issuer: "Infinity School",
       year: "2023",
       icon: <Award className="w-6 h-6" />
     },
     {
-      name: "Python Professional Certificate",
-      issuer: "Python Institute",
-      year: "2022",
-      icon: <Award className="w-6 h-6" />
-    },
-    {
-      name: "Agile Project Management",
-      issuer: "Scrum Alliance",
-      year: "2022",
+      name: "Backend Java + Spring Boot",
+      issuer: "DIO",
+      year: "2023",
       icon: <Award className="w-6 h-6" />
     }
-  ];
-
-  const courses = [
-    "Advanced React Patterns",
-    "Node.js Microservices",
-    "Database Design & Optimization",
-    "DevOps & CI/CD",
-    "System Design",
-    "Machine Learning Fundamentals"
   ];
 
   return (
@@ -69,7 +68,7 @@ const Education = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
           {/* Formal Education */}
           <div>
             <div className="flex items-center mb-8">
@@ -77,13 +76,13 @@ const Education = () => {
               <h3 className="text-2xl font-bold text-foreground">Formal Education</h3>
             </div>
             
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               {education.map((edu, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 max-h-fit min-h-full"
                 >
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between mb-2">
                     <div>
                       <h4 className="text-xl font-bold text-foreground mb-1">
                         {edu.degree}
@@ -134,31 +133,6 @@ const Education = () => {
                     </p>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            {/* Continuous Learning */}
-            <div>
-              <div className="flex items-center mb-8">
-                <BookOpen className="w-8 h-8 text-primary mr-3" />
-                <h3 className="text-2xl font-bold text-foreground">Continuous Learning</h3>
-              </div>
-              
-              <div className="bg-card rounded-2xl p-6 shadow-lg">
-                <p className="text-muted-foreground mb-6">
-                  Recent courses and topics I've been exploring to stay current with industry trends:
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {courses.map((course, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center p-3 bg-muted rounded-lg"
-                    >
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full mr-3"></div>
-                      <span className="text-foreground">{course}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>

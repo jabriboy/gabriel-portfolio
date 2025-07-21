@@ -36,7 +36,7 @@ const About = () => {
             </h2>
             
             <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p className="text-lg">
+              <p>
                 Hi! I'm Gabriel Rocha, a passionate FullStack Developer with a love for creating 
                 digital experiences that make a difference. With expertise in modern web technologies, 
                 I specialize in building scalable applications using TypeScript, React, Node.js, and Python.
@@ -49,25 +49,19 @@ const About = () => {
               </p>
               
               <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community. I believe 
-                in continuous learning and staying up-to-date with the latest industry trends.
+                When I'm not coding, I enjoy spending time with friends and family. Having a social life is important to me. it helps me recharge and keep a fresh perspective, so I can return to work focused and motivated.
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-12">
+            <div className="grid grid-cols-2 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-3xl font-bold text-foreground mb-2">3+</div>
+                <div className="text-3xl font-bold text-foreground mb-2">4+</div>
                 <div className="text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-foreground mb-2">50+</div>
+                <div className="text-3xl font-bold text-foreground mb-2">30+</div>
                 <div className="text-muted-foreground">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-foreground mb-2">20+</div>
-                <div className="text-muted-foreground">Happy Clients</div>
               </div>
             </div>
           </div>

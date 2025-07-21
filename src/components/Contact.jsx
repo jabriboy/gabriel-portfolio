@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     subject: '',
     message: ''
   });
@@ -19,9 +18,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    window.location.href = `mailto:jabrirocha@gmail.com?subject=${formData.name}%20-%20${formData.subject}&body=${formData.message}`;
     setFormData({
       name: '',
-      email: '',
       subject: '',
       message: ''
     });
@@ -31,20 +30,20 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "gabriel.rocha@email.com",
-      link: "mailto:gabriel.rocha@email.com"
+      value: "jabrirocha@gmail.com",
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=jabrirocha@gmail.com&su=Assunto%20da%20Mensagem&body=Olá,%20gostaria%20de%20entrar%20em%20contato."
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      value: "+55 (11) 99999-9999",
-      link: "tel:+5511999999999"
+      value: "+55 (71) 98526-8660",
+      link: "tel:+5571985268660"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Location",
-      value: "São Paulo, Brazil",
-      link: "#"
+      value: "Salvador, BA",
+      link: "https://www.google.com/maps?q=Salvador+Bahia"
     }
   ];
 
@@ -52,19 +51,19 @@ const Contact = () => {
     {
       icon: <Github className="w-6 h-6" />,
       name: "GitHub",
-      url: "https://github.com/gabrielrocha",
+      url: "https://github.com/jabriboy",
       color: "rgb(0, 0, 0)"
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/gabrielrocha",
+      url: "https://www.linkedin.com/in/gabriel-rocha-831a2b215/",
       color: "rgb(0, 0, 0)"
     },
     {
-      icon: <Twitter className="w-6 h-6" />,
-      name: "Twitter",
-      url: "https://twitter.com/gabrielrocha",
+      icon: <Instagram className="w-6 h-6" />,
+      name: "Instagram",
+      url: "https://www.instagram.com/jabri_gabriel/",
       color: "rgb(0, 0, 0)"
     }
   ];
@@ -92,6 +91,7 @@ const Contact = () => {
                 <a
                   key={index}
                   href={info.link}
+                  target='_blank'
                   className="flex items-center p-4 rounded-xl transition-colors duration-200 group"
                   style={{ backgroundColor: 'rgb(245, 245, 245)' }}
                 >
@@ -137,48 +137,25 @@ const Contact = () => {
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: 'rgb(0, 0, 0)' }}>
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg transition-colors duration-200"
-                    style={{
-                      backgroundColor: 'rgb(255, 255, 255)',
-                      border: '1px solid rgb(230, 230, 230)',
-                      color: 'rgb(0, 0, 0)'
-                    }}
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: 'rgb(0, 0, 0)' }}>
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg transition-colors duration-200"
-                    style={{
-                      backgroundColor: 'rgb(255, 255, 255)',
-                      border: '1px solid rgb(230, 230, 230)',
-                      color: 'rgb(0, 0, 0)'
-                    }}
-                    placeholder="your.email@example.com"
-                  />
-                </div>
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: 'rgb(0, 0, 0)' }}>
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-lg transition-colors duration-200"
+                  style={{
+                    backgroundColor: 'rgb(255, 255, 255)',
+                    border: '1px solid rgb(230, 230, 230)',
+                    color: 'rgb(0, 0, 0)'
+                  }}
+                  placeholder="Your name"
+                />
               </div>
 
               <div>
