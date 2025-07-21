@@ -72,7 +72,7 @@ const Portfolio = () => {
             >
               {/* Project Image */}
               <div
-                className="h-58 flex items-center justify-center"
+                className="min-h-fit flex items-center justify-center"
                 style={{
                   background: `linear-gradient(to bottom right, rgb(243, 244, 246), rgb(229, 231, 235))`
                 }}
