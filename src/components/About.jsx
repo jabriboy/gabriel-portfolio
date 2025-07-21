@@ -26,16 +26,16 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Text Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               About Me
             </h2>
             
-            <div className="space-y-6 text-gray-600 leading-relaxed">
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p className="text-lg">
                 Hi! I'm Gabriel Rocha, a passionate FullStack Developer with a love for creating 
                 digital experiences that make a difference. With expertise in modern web technologies, 
@@ -58,16 +58,16 @@ const About = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-2">3+</div>
-                <div className="text-gray-600">Years Experience</div>
+                <div className="text-3xl font-bold text-foreground mb-2">3+</div>
+                <div className="text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-2">50+</div>
-                <div className="text-gray-600">Projects Completed</div>
+                <div className="text-3xl font-bold text-foreground mb-2">50+</div>
+                <div className="text-muted-foreground">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-2">20+</div>
-                <div className="text-gray-600">Happy Clients</div>
+                <div className="text-3xl font-bold text-foreground mb-2">20+</div>
+                <div className="text-muted-foreground">Happy Clients</div>
               </div>
             </div>
           </div>
@@ -77,16 +77,16 @@ const About = () => {
             {highlights.map((highlight, index) => (
               <div
                 key={index}
-                className="flex items-start space-x-4 p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors duration-200"
+                className="flex items-start space-x-4 p-6 bg-muted rounded-2xl hover:bg-accent transition-colors duration-200"
               >
-                <div className="flex-shrink-0 p-3 bg-white rounded-xl shadow-md text-gray-700">
+                <div className="flex-shrink-0 p-3 bg-background rounded-xl shadow-md text-muted-foreground">
                   {highlight.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-foreground mb-2">
                     {highlight.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {highlight.description}
                   </p>
                 </div>
@@ -100,4 +100,3 @@ const About = () => {
 };
 
 export default About;
-

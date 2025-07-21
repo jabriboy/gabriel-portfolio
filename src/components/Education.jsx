@@ -56,14 +56,14 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-50">
+    <section id="education" className="py-20 bg-primary-foreground">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Education & Learning
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Continuous learning is key to staying current in technology. 
             Here's my educational background and ongoing learning journey.
           </p>
@@ -73,31 +73,31 @@ const Education = () => {
           {/* Formal Education */}
           <div>
             <div className="flex items-center mb-8">
-              <GraduationCap className="w-8 h-8 text-gray-700 mr-3" />
-              <h3 className="text-2xl font-bold text-gray-900">Formal Education</h3>
+              <GraduationCap className="w-8 h-8 text-primary mr-3" />
+              <h3 className="text-2xl font-bold text-foreground">Formal Education</h3>
             </div>
             
             <div className="space-y-6">
               {education.map((edu, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-1">
+                      <h4 className="text-xl font-bold text-foreground mb-1">
                         {edu.degree}
                       </h4>
-                      <p className="text-gray-600 font-medium">
+                      <p className="text-muted-foreground font-medium">
                         {edu.institution}
                       </p>
                     </div>
-                    <div className="flex items-center text-gray-500 text-sm">
+                    <div className="flex items-center text-muted-foreground text-sm">
                       <Calendar className="w-4 h-4 mr-1" />
                       {edu.period}
                     </div>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {edu.description}
                   </p>
                 </div>
@@ -110,26 +110,26 @@ const Education = () => {
             {/* Certifications */}
             <div className="mb-12">
               <div className="flex items-center mb-8">
-                <Award className="w-8 h-8 text-gray-700 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">Certifications</h3>
+                <Award className="w-8 h-8 text-primary mr-3" />
+                <h3 className="text-2xl font-bold text-foreground">Certifications</h3>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {certifications.map((cert, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-200"
+                    className="bg-card rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-200"
                   >
                     <div className="flex items-center mb-2">
-                      <div className="text-gray-700 mr-2">
+                      <div className="text-primary mr-2">
                         {cert.icon}
                       </div>
-                      <span className="text-gray-500 text-sm">{cert.year}</span>
+                      <span className="text-muted-foreground text-sm">{cert.year}</span>
                     </div>
-                    <h4 className="font-bold text-gray-900 mb-1">
+                    <h4 className="font-bold text-foreground mb-1">
                       {cert.name}
                     </h4>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-muted-foreground text-sm">
                       {cert.issuer}
                     </p>
                   </div>
@@ -140,22 +140,22 @@ const Education = () => {
             {/* Continuous Learning */}
             <div>
               <div className="flex items-center mb-8">
-                <BookOpen className="w-8 h-8 text-gray-700 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">Continuous Learning</h3>
+                <BookOpen className="w-8 h-8 text-primary mr-3" />
+                <h3 className="text-2xl font-bold text-foreground">Continuous Learning</h3>
               </div>
               
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <p className="text-gray-600 mb-6">
+              <div className="bg-card rounded-2xl p-6 shadow-lg">
+                <p className="text-muted-foreground mb-6">
                   Recent courses and topics I've been exploring to stay current with industry trends:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {courses.map((course, index) => (
                     <div
                       key={index}
-                      className="flex items-center p-3 bg-gray-50 rounded-lg"
+                      className="flex items-center p-3 bg-muted rounded-lg"
                     >
-                      <div className="w-2 h-2 bg-gray-400 rounded-full mr-3"></div>
-                      <span className="text-gray-700">{course}</span>
+                      <div className="w-2 h-2 bg-muted-foreground rounded-full mr-3"></div>
+                      <span className="text-foreground">{course}</span>
                     </div>
                   ))}
                 </div>
@@ -169,4 +169,3 @@ const Education = () => {
 };
 
 export default Education;
-

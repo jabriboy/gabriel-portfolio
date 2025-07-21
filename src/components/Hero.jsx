@@ -13,12 +13,12 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="max-h-screen flex items-center justify-center bg-background text-foreground"
+      className="min-h-screen flex items-center justify-center bg-background text-foreground"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           {/* Profile Image */}
-          <div className="mt-8 mb-2 w-48 h-48 mx-auto rounded-full overflow-hidden">
+          <div className="mb-2 w-48 h-48 mx-auto rounded-full overflow-hidden">
             <img
               src={photo}
               alt="my-photo"
@@ -44,19 +44,22 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-4">
             <a
-              href="#"
+              href="https://github.com/jabriboy"
+              target='_blank'
               className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300 text-muted-foreground hover:text-foreground"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/gabriel-rocha-831a2b215/"
+              target='_blank'
               className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300 text-muted-foreground hover:text-foreground"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="#"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jabrirocha@gmail.com&su=Assunto%20da%20Mensagem&body=Olá,%20gostaria%20de%20entrar%20em%20contato."
+              target='_blank'
               className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300 text-muted-foreground hover:text-foreground"
             >
               <Mail className="w-6 h-6" />

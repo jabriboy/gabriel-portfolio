@@ -1,56 +1,60 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import kyrios from '../assets/kyrios-img.png'
+import flechaServicos from '../assets/flecha-servicos-img.png'
+import stop from '../assets/stop-img.png'
+import whisper from '../assets/whisper-img.png'
 
 const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      image: "/api/placeholder/400/250",
-      liveUrl: "#",
-      githubUrl: "#"
+      title: "SaaS Platform - Kyrios",
+      description: "Full-stack SaaS platform for managing a digital cash journal, tailored for small businesses and nonprofit organizations. The application includes secure user authentication, subscription-based access with multiple pricing tiers, and integrated payment processing. Designed to simplify financial tracking and improve accountability, especially for organizations in the third sector.",
+      technologies: ["React", "Node.js", "TypeScript", "Firebase", "Stripe"],
+      image: kyrios,
+      liveUrl: "https://www.sejakyrios.com.br",
+      githubUrl: "https://github.com/jabriboy/Kyrios"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Collaborative task management application with real-time updates, built using React, TypeScript, and Firebase.",
-      technologies: ["React", "TypeScript", "Firebase", "Material-UI"],
-      image: "/api/placeholder/400/250",
-      liveUrl: "#",
-      githubUrl: "#"
+      title: "Landing Page - Flecha Serviços",
+      description: "Landing page designed and developed for an independent electrician to enhance his online presence. The page improves credibility by showcasing his services, contact information, and customer testimonials in a clean and professional layout.",
+      technologies: ["React", "JavaScript"],
+      image: flechaServicos,
+      liveUrl: "https://flechaservicos.com.br/",
+      githubUrl: "https://github.com/jabriboy/flechaServicos"
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "Interactive weather dashboard with data visualization, built with Python Flask backend and React frontend.",
-      technologies: ["Python", "Flask", "React", "Chart.js"],
-      image: "/api/placeholder/400/250",
-      liveUrl: "#",
-      githubUrl: "#"
+      title: "Letter Generator - Stop",
+      description: "A responsive web application built to modernize the classic paper-and-pencil game Stop. In the traditional version, players often choose letters by counting on their fingers, which can result in repeated letters and confusion. This app ensures a randomized, non-repeating letter selection that is instantly visible to all players, making the game faster, fairer, and more fun.",
+      technologies: ["React", "JavaScript"],
+      image: stop,
+      liveUrl: "https://stop-eta.vercel.app/",
+      githubUrl: "https://github.com/jabriboy/LetterGenerator"
     },
     {
       id: 4,
-      title: "Social Media Analytics",
-      description: "Analytics platform for social media metrics with automated reporting and insights generation.",
-      technologies: ["Python", "Django", "React", "PostgreSQL"],
-      image: "/api/placeholder/400/250",
+      title: "Whisper - Whatsapp Clone",
+      description: "Real-time chat application developed as part of a college course focused on full-stack development with C# and .NET. The platform allows multiple users to communicate through separate accounts in real time, simulating a functional messaging environment.",
+      technologies: ["C#", ".NET", "React", "JavaScript"],
+      image: whisper,
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "https://github.com/jabriboy/projetoFinal-lp3.Interface"
     }
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-20" style={{ backgroundColor: `rgb(255, 255, 255)` }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: `rgb(17, 24, 39)` }}>
             Portfolio
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A collection of projects that showcase my skills in full-stack development, 
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: `rgb(107, 114, 128)` }}>
+            A collection of projects that showcase my skills in full-stack development,
             from concept to deployment.
           </p>
         </div>
@@ -60,19 +64,28 @@ const Portfolio = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+              className="rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+              style={{
+                backgroundColor: `rgb(255, 255, 255)`,
+                border: `1px solid rgb(229, 231, 235)`
+              }}
             >
               {/* Project Image */}
-              <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <span className="text-gray-500 text-lg">Project Image</span>
+              <div
+                className="h-58 flex items-center justify-center"
+                style={{
+                  background: `linear-gradient(to bottom right, rgb(243, 244, 246), rgb(229, 231, 235))`
+                }}
+              >
+                <img src={project.image} alt="project image" />
               </div>
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold mb-3" style={{ color: `rgb(17, 24, 39)` }}>
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="mb-4 leading-relaxed text-justify" style={{ color: `rgb(107, 114, 128)` }}>
                   {project.description}
                 </p>
 
@@ -81,7 +94,11 @@ const Portfolio = () => {
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
+                      className="px-3 py-1 rounded-full text-sm font-medium"
+                      style={{
+                        backgroundColor: `rgb(243, 244, 246)`,
+                        color: `rgb(107, 114, 128)`
+                      }}
                     >
                       {tech}
                     </span>
@@ -90,16 +107,29 @@ const Portfolio = () => {
 
                 {/* Project Links */}
                 <div className="flex space-x-4">
+                  {project.liveUrl != "#" 
+                  ?
                   <a
                     href={project.liveUrl}
-                    className="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm font-medium"
-                  >
+                    target='_blank'
+                    className="inline-flex items-center px-4 py-2 rounded-lg transition-colors duration-200 text-sm font-medium bg-dark-gray-background"
+                    style={{
+                      color: `white`
+                    }}
+                    >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
                   </a>
+                  : <></>}
+                  
                   <a
                     href={project.githubUrl}
-                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-sm font-medium"
+                    target='_blank'
+                    className="inline-flex items-center px-4 py-2 border rounded-lg transition-colors duration-200 text-sm font-medium"
+                    style={{
+                      borderColor: `rgb(229, 231, 235)`,
+                      color: `rgb(17, 24, 39)`
+                    }}
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
@@ -115,4 +145,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-

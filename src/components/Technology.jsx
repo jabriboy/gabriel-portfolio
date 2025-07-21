@@ -38,14 +38,14 @@ const Technology = () => {
   ];
 
   return (
-    <section id="technology" className="py-20 bg-gray-50">
+    <section id="technology" className="py-20 bg-primary-foreground">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Technology Stack
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life, 
             from frontend interfaces to backend systems.
           </p>
@@ -56,9 +56,9 @@ const Technology = () => {
           {techCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
                 {category.title}
               </h3>
               
@@ -66,18 +66,18 @@ const Technology = () => {
                 {category.technologies.map((tech, techIndex) => (
                   <div key={techIndex} className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-700 font-medium">
+                      <span className="text-foreground font-medium">
                         {tech.name}
                       </span>
-                      <span className="text-gray-500 text-sm">
+                      <span className="text-muted-foreground text-sm">
                         {tech.level}%
                       </span>
                     </div>
                     
                     {/* Progress Bar */}
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-muted rounded-full h-2">
                       <div
-                        className="bg-gradient-to-r from-gray-600 to-gray-800 h-2 rounded-full transition-all duration-1000 ease-out"
+                        className="bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${tech.level}%` }}
                       ></div>
                     </div>
@@ -90,7 +90,7 @@ const Technology = () => {
 
         {/* Additional Skills */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">
+          <h3 className="text-2xl font-bold text-foreground mb-8">
             Additional Skills
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -106,7 +106,7 @@ const Technology = () => {
             ].map((skill, index) => (
               <span
                 key={index}
-                className="px-6 py-3 bg-white text-gray-700 rounded-full shadow-md hover:shadow-lg transition-shadow duration-200 font-medium"
+                className="px-6 py-3 bg-card text-foreground rounded-full shadow-md hover:shadow-lg transition-shadow duration-200 font-medium"
               >
                 {skill}
               </span>
@@ -119,4 +119,3 @@ const Technology = () => {
 };
 
 export default Technology;
-
