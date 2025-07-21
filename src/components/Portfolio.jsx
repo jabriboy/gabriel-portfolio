@@ -112,7 +112,7 @@ const Portfolio = () => {
                   <a
                     href={project.liveUrl}
                     target='_blank'
-                    className="inline-flex items-center px-4 py-2 rounded-lg transition-colors duration-200 text-sm font-medium bg-dark-gray-background"
+                    className="inline-flex items-center px-4 py-2 rounded-lg transition-transform duration-300 text-sm font-medium bg-dark-gray-background transform hover:scale-102"
                     style={{
                       color: `white`
                     }}
@@ -125,13 +125,9 @@ const Portfolio = () => {
                   <a
                     href={project.githubUrl}
                     target='_blank'
-                    className="inline-flex items-center px-4 py-2 border rounded-lg transition-colors duration-200 text-sm font-medium"
-                    style={{
-                      borderColor: `rgb(229, 231, 235)`,
-                      color: `rgb(17, 24, 39)`
-                    }}
+                    className="inline-flex items-center px-4 py-2 border rounded-lg transition-transform duration-300 text-sm font-medium transform hover:scale-102"
                   >
-                    <Github className="w-4 h-4 mr-2" />
+                    <Github className="w-4 h-4 mr-2"/>
                     Code
                   </a>
                 </div>

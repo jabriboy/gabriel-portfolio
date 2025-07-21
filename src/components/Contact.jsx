@@ -120,7 +120,7 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg transition-colors duration-200"
+                    className="p-3 rounded-lg transition-transform duration-300 transform hover:scale-105"
                     style={{ backgroundColor: 'rgb(245, 245, 245)', color: social.color }}
                     title={social.name}
                   >

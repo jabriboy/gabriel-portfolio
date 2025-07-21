@@ -2,6 +2,8 @@ import React from 'react';
 import { GraduationCap, Award, BookOpen, Calendar } from 'lucide-react';
 
 const Education = () => {
+  const awordIcon = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award-icon lucide-award"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+
   const education = [
     {
       degree: "Bachelor's in Computer Engineering",
@@ -38,19 +40,19 @@ const Education = () => {
       name: "Dev. FullStack",
       issuer: "Infinity School",
       year: "2023",
-      icon: <Award className="w-6 h-6" />
+      icon: awordIcon
     },
     {
       name: "Backend Flask",
       issuer: "Infinity School",
       year: "2023",
-      icon: <Award className="w-6 h-6" />
+      icon: awordIcon
     },
     {
       name: "Backend Java + Spring Boot",
       issuer: "DIO",
       year: "2023",
-      icon: <Award className="w-6 h-6" />
+      icon: awordIcon
     }
   ];
 
@@ -82,23 +84,25 @@ const Education = () => {
                   key={index}
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 max-h-fit min-h-full"
                 >
-                  <div className="flex items-start justify-between mb-2">
-                    <div>
-                      <h4 className="text-xl font-bold text-foreground mb-1">
-                        {edu.degree}
-                      </h4>
-                      <p className="text-muted-foreground font-medium">
-                        {edu.institution}
-                      </p>
+                  <div>
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <h4 className="text-xl font-bold text-foreground mb-1">
+                          {edu.degree}
+                        </h4>
+                        <p className="text-muted-foreground font-medium">
+                          {edu.institution}
+                        </p>
+                      </div>
+                      <div className="flex items-center text-muted-foreground text-sm">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {edu.period}
+                      </div>
                     </div>
-                    <div className="flex items-center text-muted-foreground text-sm">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {edu.period}
-                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {edu.description}
+                    </p>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {edu.description}
-                  </p>
                 </div>
               ))}
             </div>
@@ -120,7 +124,7 @@ const Education = () => {
                     className="bg-card rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-200"
                   >
                     <div className="flex items-center mb-2">
-                      <div className="text-primary mr-2">
+                      <div className="text-muted-foreground mr-2">
                         {cert.icon}
                       </div>
                       <span className="text-muted-foreground text-sm">{cert.year}</span>

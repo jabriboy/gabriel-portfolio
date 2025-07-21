@@ -46,21 +46,21 @@ const Hero = () => {
             <a
               href="https://github.com/jabriboy"
               target='_blank'
-              className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300 text-muted-foreground hover:text-foreground"
+              className="p-3 rounded-full bg-muted shadow-md hover:shadow-lg transition duration-300 text-muted-foreground hover:text-primary transform hover:scale-105"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
               href="https://www.linkedin.com/in/gabriel-rocha-831a2b215/"
               target='_blank'
-              className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300 text-muted-foreground hover:text-foreground"
+              className="p-3 rounded-full bg-muted shadow-md hover:shadow-lg transition duration-300 text-muted-foreground hover:text-primary transform hover:scale-105"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=jabrirocha@gmail.com&su=Assunto%20da%20Mensagem&body=Olá,%20gostaria%20de%20entrar%20em%20contato."
               target='_blank'
-              className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300 text-muted-foreground hover:text-foreground"
+              className="p-3 rounded-full bg-muted shadow-md hover:shadow-lg transition duration-300 text-muted-foreground hover:text-primary transform hover:scale-105"
             >
               <Mail className="w-6 h-6" />
             </a>
@@ -69,7 +69,7 @@ const Hero = () => {
           {/* CTA Button */}
           <button
             onClick={scrollToPortfolio}
-            className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-full hover:brightness-90 transition duration-300 text-lg font-medium"
+            className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-full hover:brightness-90 text-lg font-medium transform transition-transform duration-300 hover:scale-102 cursor-pointer"
           >
             View My Work
           </button>

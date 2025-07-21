@@ -13,8 +13,11 @@ const Header = () => {
     { name: 'Contact Me', href: '#contact' }
   ];
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
+  const [selected, setSelected] = useState("Home")
+
+  const scrollToSection = (item) => {
+    const element = document.querySelector(item.href);
+    setSelected(item.name)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -36,8 +39,13 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  onClick={() => scrollToSection(item)}
+                  
+                  className={selected != item.name 
+                  ?
+                  "text-gray-600 hover:text-foreground px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer" 
+                  :
+                  "text-primary font-bold px-3 py-2 text-sm transition-colors duration-200 cursor-pointer"}
                 >
                   {item.name}
                 </button>
@@ -67,7 +75,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => scrollToSection(item)}
                   className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200"
                 >
                   {item.name}
