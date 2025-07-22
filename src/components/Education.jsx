@@ -94,7 +94,7 @@ const Education = () => {
                           {edu.institution}
                         </p>
                       </div>
-                      <div className="flex items-center text-muted-foreground text-sm">
+                      <div className="flex items-center text-muted-foreground text-sm mt-1">
                         <Calendar className="w-4 h-4 mr-1" />
                         {edu.period}
                       </div>
